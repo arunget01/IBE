@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite1]" parallel="tests">
+  <listeners>
+    <listener class-name="com.orbitz.travelport.supportclasses.TestNGInterceptor"/>
+  </listeners>
+  <test name="FireFoxTests4(failed)" parallel="tests" preserve-order="false">
+    <groups>
+      <run>
+        <include name="general"/>
+        <include name="air"/>
+        <include name="car"/>
+        <include name="careservice"/>
+        <include name="hotel"/>
+        <include name="rail"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.orbitz.travelport.product.hotel.test.HotelBooking">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="hotelBookingByCompanyLocation"/>
+        </methods>
+      </class>
+      <class name="com.orbitz.travelport.product.car.test.CarBooking">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

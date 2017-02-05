@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="localhost.localdomain" name="com.orbitz.travelport.product.hotel.test.HotelBooking" tests="1" failures="1" timestamp="18 Apr 2012 09:31:04 GMT" time="357.205" errors="0">
+  <testcase name="hotelBookingByCompanyLocation" time="288.981" classname="com.orbitz.travelport.product.hotel.test.HotelBooking">
+    <failure type="org.openqa.selenium.NoSuchElementException" message="Unable to locate element: {&amp;quot;method&amp;quot;:&amp;quot;id&amp;quot;,&amp;quot;selector&amp;quot;:&amp;quot;htlStartDate&amp;quot;}
+Command duration or timeout: 30.65 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &amp;apos;2.20.0&amp;apos;, revision: &amp;apos;16008&amp;apos;, time: &amp;apos;2012-02-27 19:03:59&amp;apos;
+System info: os.name: &amp;apos;Linux&amp;apos;, os.arch: &amp;apos;i386&amp;apos;, os.version: &amp;apos;2.6.18-274.17.1.el5PAE&amp;apos;, java.version: &amp;apos;1.7.0&amp;apos;
+Driver info: driver.version: EventFiringWebDriver">
+      <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"htlStartDate"}
+Command duration or timeout: 30.65 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.20.0', revision: '16008', time: '2012-02-27 19:03:59'
+System info: os.name: 'Linux', os.arch: 'i386', os.version: '2.6.18-274.17.1.el5PAE', java.version: '1.7.0'
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:170)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:438)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:226)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:243)
+	at org.openqa.selenium.By$ById.findElement(By.java:216)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:218)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:98)
+	at $Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:177)
+	at com.orbitz.travelport.product.hotel.keyword.HotelCommon.inputCheckInDate(Unknown Source)
+	at com.orbitz.travelport.product.hotel.keyword.HotelCommon.searchForHotelAvailability(Unknown Source)
+	at com.orbitz.travelport.product.hotel.keyword.HotelCommon.searchForHotelAvailability(Unknown Source)
+	at com.orbitz.travelport.product.hotel.test.HotelBooking.hotelBookingByCompanyLocation(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"id","selector":"htlStartDate"}
+Build info: version: '2.20.0', revision: '16008', time: '2012-02-27 19:03:59'
+System info: os.name: 'Linux', os.arch: 'i386', os.version: '2.6.18-274.17.1.el5PAE', java.version: '1.7.0'
+Driver info: driver.version: unknown
+	at <anonymous class>.<anonymous method>(file:///tmp/anonymous6624246882243138047webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8998)
+	at <anonymous class>.<anonymous method>(file:///tmp/anonymous6624246882243138047webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:10140)
+	at <anonymous class>.<anonymous method>(file:///tmp/anonymous6624246882243138047webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:260)
+	at <anonymous class>.<anonymous method>(file:///tmp/anonymous6624246882243138047webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8585)
+... Removed 24 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>
