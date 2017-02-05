@@ -16,7 +16,7 @@ public class BaseTestClass {
 
 
     public static void   openChromeBrowser(){
-        System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/java/chromedriver.exe");
 
         driver = new ChromeDriver();
         System.out.println("Base ran:");
