@@ -38,7 +38,7 @@ public class HotelStepDefsSupport  extends BaseTestClass{
 
         driver.get("https://www.totalrewards.com/reserve/");
         ExplicitWait(driver, "Why book direct");
-        Assert
+       // Assert
 
     }
 
