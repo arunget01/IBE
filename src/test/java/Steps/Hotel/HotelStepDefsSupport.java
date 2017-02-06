@@ -1,4 +1,4 @@
-package Steps;
+package Steps.Hotel;
 import BaseTests.BaseTestClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package Steps;
+package Steps.Hotel;
 
 import BaseTests.BaseTestClass;
 
