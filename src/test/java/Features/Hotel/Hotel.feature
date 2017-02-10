@@ -1,18 +1,22 @@
 Feature:
   Hotel Features
 
-  Scenario Outline: Exact date search
-    Given user go to landing page
-    And User selects Exact date
-    And User selects below "<markets>" and "<hotels>"
-    And User selectes dates which is one month head
-    When User click on Search
-    Then Search results should be displayed
+  Scenario : Exact Date Search for Market
+    When Select accessibilty filter.
+    And Select Room "Go Room | 1 King | Non-Smoking"
+    Then Verify Itinerary Page
+    And  Navigate to Dining, Reserve a Table -> Add a restaurant
+    And  Continue to Checkout
+    Then Verify Trip Summary Page
+    And  Check the room details added to cart.
+    And Remove room from cart
+    And Update room in cart
+    And Continue to Checkout
+    Then Verify Payment Page
+    Then  Check whether the 'check-in time' related label on the payment page is updated with the text box as 'Select your estimated time of arrival' & display the updated text message.
+    And Fill Up the Guest Details
 
-    Examples:
-      |markets|hotels|
-    | Las Vegas     |  Caesars    |
-    | Las Vegas     |    The Linq  |
+
 
 
 
