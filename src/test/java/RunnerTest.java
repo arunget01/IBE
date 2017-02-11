@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 /**
  * Created by ADMIN on 1/24/2017.
  */
-//@RunWith=
+//@RunWith=ArunKumar
 @CucumberOptions(features={"src/test/java/Features"},format={"json:target/cucumber.json","html:target/site/cucumber-pretty"} , glue = "Steps")
 public class RunnerTest extends AbstractTestNGCucumberTests {
 }
