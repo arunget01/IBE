@@ -15,6 +15,7 @@ Feature:
     Then Verify Payment Page
     Then  Check whether the 'check-in time' related label on the payment page is updated with the text box as 'Select your estimated time of arrival' & display the updated text message.
     And Fill Up the Guest Details
+    Then
 
 
 
