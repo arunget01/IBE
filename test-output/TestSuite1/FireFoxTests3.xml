@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="localhost.localdomain" name="com.orbitz.travelport.product.car.test.CarBooking" tests="1" failures="0" timestamp="18 Apr 2012 09:32:11 GMT" time="423.598" errors="0">
-  <testcase name="carBookingByCompanyLocation" time="352.963" classname="com.orbitz.travelport.product.car.test.CarBooking"/>
-</testsuite>

@@ -1,6 +1,7 @@
 Feature:
   Hotel Features
 
+
   Scenario Outline: Exact date search
     Given user go to landing page
     And User selects Exact date
@@ -9,7 +10,7 @@ Feature:
     When User click on Search
     Then Search results should be displayed
 
-    Examples:
+    Examples:b
       |markets|hotels|
     | Las Vegas     |  Caesars    |
     | Las Vegas     |    The Linq  |
