@@ -1,7 +1,7 @@
 Feature:
   Hotel Features
 
-  Scenario : Exact Date Search for Market
+ /* Scenario : Exact Date Search for Market
     When Select accessibilty filter.
     And Select Room "Go Room | 1 King | Non-Smoking"
     Then Verify Itinerary Page
@@ -15,9 +15,12 @@ Feature:
     Then Verify Payment Page
     Then  Check whether the 'check-in time' related label on the payment page is updated with the text box as 'Select your estimated time of arrival' & display the updated text message.
     And Fill Up the Guest Details
-    Then
+    Then arun m
+*/
 
-
+  Scenario: Exact date searches
+    Given user go to landing page
+    And User selects market
 
 
 

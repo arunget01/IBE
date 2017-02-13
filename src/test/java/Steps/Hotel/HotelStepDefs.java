@@ -1,10 +1,13 @@
 package Steps.Hotel;
 
 import BaseTests.BaseTestClass;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * Created by ADMIN on 1/18/2017.
@@ -13,57 +16,33 @@ public class HotelStepDefs extends BaseTestClass {
 
     // public static WebDriver driver ;
 
-    // HotelStepDefsSupport hhsp ;
+    // HotelStepDefsFunctions hhsp ;
 
-    @Given("^user go to landing page$")
+   /* @Given("^user go to landing page$")
     public void userGoToLandingPage( ) throws Throwable {
         openChromeBrowser();
-        HotelStepDefsSupport.loadLandingPages();
+        //HotelStepDefsFunctions.loadLandingPages();
      //
+    }  */
+
+
+    // 1st step
+    @Given("^user go to landing page$")
+    public void userGoToLandingPage() throws Throwable {
+        openChromeBrowser();
+        HotelStepDefsSupports.openlandingpage();
     }
 
 
-    @And("^User selects Exact date$")
-    public void userSelectsExactDate() throws Throwable {
-        System.out.println("User selected Exct date search");
-        HotelStepDefsSupport.loadLandingPages();
-
-
-    }
-
-    @And("^User selects below \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void userSelectsBelowAnd(String arg0, String arg1) throws Throwable {
-        System.out.println("User Selected Markets =" +arg0+ "and Hotel ="+arg1);
-        HotelStepDefsSupport.loadLandingPages();
-
-
+    //2nd step
+    @And("^User selects market$")
+    public void userSelectsMarket() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.selectMarket();
 
     }
 
-    @And("^User selectes dates which is (\\d+) month head$")
-    public void userSelectesDatesWhichIsMonthHead(int arg0) throws Throwable {
-        System.out.println("User selected dates");
-        HotelStepDefsSupport.loadLandingPages();
 
-    }
 
-    @When("^User click on Search$")
-    public void userClickOnSearch() throws Throwable {
-        System.out.println("User clicked search button");
-        HotelStepDefsSupport.loadLandingPages();
-
-    }
-
-    @Then("^Search results should be displayed$")
-    public void searchResultsShouldBeDisplayed() throws Throwable {
-        HotelStepDefsSupport.closeBrowser();
-        HotelStepDefsSupport.quitDriver();
-        System.out.println("Search results displayed");
-    }
-
-    @And("^User selectes dates which is one month head$")
-    public void userSelectesDatesWhichIsOneMonthHead() throws Throwable {
-        System.out.println("User selected dates");
-        HotelStepDefsSupports.hotelHomapageurlx();
-    }
 }
+
