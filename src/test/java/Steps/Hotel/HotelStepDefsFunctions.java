@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by ADMIN on 1/20/2017.
  */
-public class HotelStepDefsSupport  extends BaseTestClass{
+public class HotelStepDefsFunctions extends BaseTestClass{
 
 
 
