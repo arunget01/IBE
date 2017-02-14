@@ -18,15 +18,94 @@ public class HotelStepDefsSupports extends BaseTestClass{
 //WebDriver drivern;
 
 
+
+    public static  void quitallchrome()
+
+    {
+        driver.quit();
+
+    }
+
+    public static  void waittensec()
+
+    {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+    }
+
+
+    public static  void waitfivesec()
+
+    {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+    }
+
+
+
+    public static  void waittwosec()
+
+    {
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+    }
+
     public static  void openlandingpage()
 
     {
-        //BaseTestClass.initalizedriver();
+        openChromeBrowser();
         driver.manage().window().maximize();
         driver.get("https://www.totalrewards.com/reserve/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
+
+
+    public static  void selectFlexDateRadio()
+
+    {
+
+        WebElement button = driver.findElement(By.xpath(".//*[@id='lblForsearchtypeCalendar']"));
+        waitForElement(button);
+        waitfivesec();
+
+        driver.findElement(By.xpath(".//*[@id='lblForsearchtypeCalendar']")).click();
+
+        //driver.findElement(By.xpath(".//*[@value=\"RateCalendar\"]")).click();
+
+        System.out.println("fffffffffffffff");
+
+
+        waitfivesec();
+    }
+
+
+
+    public static  void selectMarkets( String marketvalue)
+
+    {
+        Select dropdown = new Select(driver.findElement(By.id("location")));
+        dropdown.selectByVisibleText(marketvalue);
+
+    }
+
+
+    public static  void selectMonth( int monthvalue)
+
+    {
+        Select dropdown = new Select(driver.findElement(By.id("selectMonth")));
+        dropdown.selectByIndex(2);
+
+    }
+
+    public static  void clickSearchBtn( )
+
+    {
+        driver.findElement(By.id("btnSearch")).click();
+
+
+    }
+
 
 
     public static  void selectMarket()
