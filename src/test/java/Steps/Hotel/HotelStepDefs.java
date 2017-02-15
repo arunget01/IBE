@@ -2,6 +2,7 @@ package Steps.Hotel;
 
 import BaseTests.BaseTestClass;
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -25,7 +26,11 @@ public class HotelStepDefs extends BaseTestClass {
         //HotelStepDefsFunctions.loadLandingPages();
      //
     }  */
+  // @After
 
+ //  public static void quitallchrome(){
+  //     driver.quit();
+  // }
 
     // 1st step
     @Given("^user go to landing page$")
@@ -53,7 +58,7 @@ public class HotelStepDefs extends BaseTestClass {
     @When("^User Selects Flexible Date Search$")
     public void userSelectsFlexibleDateSearch() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        HotelStepDefsSupports.openlandingpage();
+        HotelStepDefsSupports.openlandingpageRavail();
         HotelStepDefsSupports.selectFlexDateRadio();
     }
 
@@ -88,25 +93,25 @@ public class HotelStepDefs extends BaseTestClass {
     @Then("^Verify Flex calendar page$")
     public void verifyFlexCalendarPage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        HotelStepDefsSupports.verifyFlexCal();
     }
 
     @And("^Select any rate from the table$")
     public void selectAnyRateFromTheTable() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        HotelStepDefsSupports.selectAnyRate();
     }
 
     @And("^Click Select room button from Choose Your Check-out Date overlay$")
     public void clickSelectRoomButtonFromChooseYourCheckOutDateOverlay() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        HotelStepDefsSupports.chooseCheckoutOverlay();
     }
 
     @And("^Selct Room Options$")
     public void selctRoomOptions() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        HotelStepDefsSupports.selectRoomOptions();
     }
 
     @And("^Select room 'Forum Classic Room'$")
@@ -173,9 +178,33 @@ public class HotelStepDefs extends BaseTestClass {
     }
 
     @And("^Room count \"([^\"]*)\"$")
-    public void roomCount(String arg0) throws Throwable {
+    public void roomCount(String rcnt) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        //selectRoomNumber
+
+
+        int vlue = Integer.parseInt(rcnt);
+
+        vlue = vlue - 1 ;
+
+        HotelStepDefsSupports.selectRcount( vlue);
+    }
+
+    @And("^Guest \"([^\"]*)\" Adults,  \"([^\"]*)\" Children$")
+    public void guestAdultsChildren(String adult, String child) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //selectAdults1
+                //selectChildren1
+
+        int adultc = Integer.parseInt(adult);
+        int childc = Integer.parseInt(child);
+        adultc = adultc -1 ;
+
+        HotelStepDefsSupports.selectAdult(adultc);
+        HotelStepDefsSupports.selectChild(childc);
+
+
+
     }
 }
 
