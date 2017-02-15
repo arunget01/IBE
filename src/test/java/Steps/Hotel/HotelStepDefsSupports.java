@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -42,6 +43,13 @@ public class HotelStepDefsSupports extends BaseTestClass{
     }
 
 
+    public static  void waitforgiventime(int unittime)
+
+    {
+        driver.manage().timeouts().implicitlyWait(unittime, TimeUnit.SECONDS);
+
+    }
+
 
     public static  void waittwosec()
 
@@ -60,6 +68,18 @@ public class HotelStepDefsSupports extends BaseTestClass{
 
     }
 
+
+
+
+    public static  void openlandingpageRavail()
+
+    {
+        openChromeBrowser();
+        driver.manage().window().maximize();
+        driver.get("https://www.totalrewards.com/reserve/?roomavailability=true");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+    }
 
     public static  void selectFlexDateRadio()
 
@@ -89,6 +109,117 @@ public class HotelStepDefsSupports extends BaseTestClass{
 
     }
 
+    public static void verifyFlexCal(){
+
+
+        ExplicitlyWaitforElementText( ".//*[@id='ScrollLegendPopup']");
+        List<WebElement> list = driver.findElements(By.xpath(".//*[@id='ScrollLegendPopup']"));
+        Assert.assertTrue(list.size() > 0 ,"Text not found!" );
+        List<WebElement> lists = driver.findElements(By.xpath(".//*[@id='arrivaldate']"));
+        Assert.assertTrue(lists.size() > 0 ,"Text not found!" );
+        List<WebElement> listse = driver.findElements(By.xpath(".//*[@id='CLV']"));
+        Assert.assertTrue(listse.size() > 0 ,"CLV in Calender not found" );
+
+
+
+
+        System.out.println("Verified Flex Calender Page");
+
+
+    }
+
+
+    public static  void screenshot( String marketvalue)
+
+    {
+        Select dropdown = new Select(driver.findElement(By.id("location")));
+        dropdown.selectByVisibleText(marketvalue);
+
+    }
+
+
+    public static  void selectAnyRate( )
+
+    {
+       int k=2;
+       // driver.findElement(By.xpath("(//a[contains(text(),'$')])["+k+"]")).click();
+        //(//a[contains(text(),'$123')])[2])
+
+        // dsfsdf Select dropdown = new Select(driver.findElement(By.id("location")));
+        //dropdown.selectByVisibleText(marketvalue);
+        int p = 1;
+        String vl;
+        boolean r = false;
+        int m = 0;
+        List<WebElement> buttons = driver.findElements(By.xpath(".//*[@class='col-req']"));
+        int o = buttons.size();
+
+        for (int i = 0; i < o; i++) {
+        }
+        java.util.Iterator<WebElement> i = buttons.iterator();
+        while (i.hasNext()) {
+            WebElement row = i.next();
+
+            vl = row.getText();
+            if (vl.indexOf("$") != -1) {
+               m=m+k;
+                driver.findElement(By.xpath("(//a[contains(text(),'$')])["+m+"]")).click();
+                r = true;
+
+            } else {
+                System.out.println("there is no '$$$' in temp string");
+            }
+            p++;
+            if (r == true) {
+                break;
+
+
+            }
+
+
+        }
+    }
+
+    public static void ExplicitlyWaitforlinkText( String text)
+    {
+        (new WebDriverWait(driver,10)).until(ExpectedConditions.elementToBeClickable(By.linkText(text)));
+
+    }
+
+    public static void ExplicitlyWaitforElementText(String idofele )
+    {
+
+
+
+
+        (new WebDriverWait(driver,30)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(idofele)));
+
+    }
+
+
+
+    public static  void selectRcount(int counts)
+
+    {
+        Select dropdown = new Select(driver.findElement(By.id("selectRoomNumber")));
+        dropdown.selectByIndex( counts);
+
+    }
+
+    public static  void selectAdult(int acounts)
+
+    {
+        Select dropdown = new Select(driver.findElement(By.id("selectAdults1")));
+        dropdown.selectByIndex( acounts);
+
+    }
+    public static  void selectChild(int ccounts)
+
+    {
+        Select dropdown = new Select(driver.findElement(By.id("selectChildren1")));
+        dropdown.selectByIndex( ccounts);
+
+    }
 
     public static  void selectMonth( int monthvalue)
 
@@ -106,6 +237,34 @@ public class HotelStepDefsSupports extends BaseTestClass{
 
     }
 
+
+
+    public static  void selectRoomOptions( )
+
+    {
+
+        List<WebElement> buttons = driver.findElements(By.xpath(".//a[contains(text(),'book now')]"));
+        WebElement button = buttons.get(1);
+        waitForElement(button);
+        button.click();
+        ExplicitlyWaitforlinkText("Remove");
+
+    }
+
+
+
+    public static  void chooseCheckoutOverlay( )
+
+    {
+        List<WebElement> buttons = driver.findElements(By.xpath("//a[contains(text(),'select room')]"));
+        WebElement button = buttons.get(1);
+        waitForElement(button);
+        button.click();
+        ExplicitlyWaitforlinkText("Privacy");
+        ExplicitlyWaitforlinkText("View all promotions and packages.");
+
+
+    }
 
 
     public static  void selectMarket()
