@@ -13,11 +13,10 @@ Feature: Hotel Features
    And  Select any rate from the table
    And Click Select room button from Choose Your Check-out Date overlay
    And Selct Room Options
-#    And Select room 'Forum Classic Room'
-#    Then  Verify Itinerary Page
-#    And Continue to Checkout
-#    And Trip Summary Page
-#    And Check the room details added to cart
+   And Select room 'Forum Classic Room'
+  Then  Verify Itinerary Page
+  And Continue to Checkout
+   And Check the room details added to cart as Room "1" and Guests "2"
 #    And Remove room
 #    And  Update room in cart
 #    And Continue to Checkout
