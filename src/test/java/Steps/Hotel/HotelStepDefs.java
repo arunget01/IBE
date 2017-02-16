@@ -112,31 +112,29 @@ public class HotelStepDefs extends BaseTestClass {
     public void selctRoomOptions() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         HotelStepDefsSupports.selectRoomOptions();
+
     }
 
     @And("^Select room 'Forum Classic Room'$")
     public void selectRoomForumClassicRoom() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        HotelStepDefsSupports.selectRoom();
     }
 
     @Then("^Verify Itinerary Page$")
     public void verifyItineraryPage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        HotelStepDefsSupports.verifyItinPage();
     }
 
     @And("^Continue to Checkout$")
     public void continueToCheckout() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        HotelStepDefsSupports.continueCheckOut();
+
     }
 
-    @And("^Trip Summary Page$")
-    public void tripSummaryPage() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
+
 
  
 
@@ -164,11 +162,7 @@ public class HotelStepDefs extends BaseTestClass {
         HotelStepDefsSupports.clickSearchBtn();
     }
 
-    @And("^Check the room details added to cart$")
-    public void checkTheRoomDetailsAddedToCart() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
+
 
 
     @And("^Select Market - \"([^\"]*)\"$")
@@ -205,6 +199,11 @@ public class HotelStepDefs extends BaseTestClass {
 
 
 
+    }
+
+    @And("^Check the room details added to cart as Room \"([^\"]*)\" and Guests \"([^\"]*)\"$")
+    public void checkTheRoomDetailsAddedToCartAsRoomAndGuests(int roomc, String guestc) throws Throwable {
+        HotelStepDefsSupports.verifyroomguests( roomc, guestc);
     }
 }
 

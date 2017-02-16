@@ -109,7 +109,34 @@ public class HotelStepDefsSupports extends BaseTestClass{
 
     }
 
-    public static void verifyFlexCal(){
+
+    public static  void continueCheckOut( )
+
+    {
+
+
+        List<WebElement> buttons = driver.findElements(By.xpath("//*[contains(text(), 'Continue To Checkout')]"));
+        WebElement button = buttons.get(1);
+        waitForElement(button);
+        button.click();
+
+
+
+    }
+
+
+    public static void verifyItinPage() {
+
+        ExplicitlyWaitforElementText( "//*[contains(text(), 'Hotel added')]");
+        String listf = driver.findElement(By.xpath("//*[contains(text(), 'Total:')]")).getText();
+        Assert.assertEquals(listf,"Total:","Total not found!");
+        String listsg = driver.findElement(By.xpath("//*[contains(text(), 'Taxes')]")).getText();
+        Assert.assertEquals(listsg,"Taxes:","Taxes not found!");
+
+    }
+
+
+        public static void verifyFlexCal(){
 
 
         ExplicitlyWaitforElementText( ".//*[@id='ScrollLegendPopup']");
@@ -221,6 +248,50 @@ public class HotelStepDefsSupports extends BaseTestClass{
 
     }
 
+
+
+    public static  void verifyroomguests(int rccounts, String gcountss)
+
+    {
+
+        int pip = 2;
+
+        boolean r =false;
+        int m;
+        ExplicitlyWaitforElementText( "//*[contains(text(), 'GUEST')]");
+        List<WebElement> buttons = driver.findElements(By.xpath("//*[contains(text(), 'Room')]"));
+        java.util.Iterator<WebElement> i = buttons.iterator();
+        while (i.hasNext()) {
+
+
+            WebElement row = i.next();
+            String vl = row.getText();
+            String d = "Room " + pip + ":" ;
+
+
+            if (vl.indexOf(d)!=-1) {
+                System.out.println("IF LOPPPPPPPPPP" );
+
+                Assert.assertTrue(true, "Room count not matching");
+                r = true;
+                break;
+
+            }
+
+
+
+        }
+
+        if (r == false) {
+            Assert.assertTrue(false, "Room count not matching");
+
+
+            // String listf = driver.findElement(By.xpath("//*[contains(text(), 'Room')]")).getText();
+            //Assert.assertEquals(rccounts,listf,"Total not found!");
+        }
+    }
+
+
     public static  void selectMonth( int monthvalue)
 
     {
@@ -242,6 +313,15 @@ public class HotelStepDefsSupports extends BaseTestClass{
     public static  void selectRoomOptions( )
 
     {
+         waitfivesec();
+        driver.findElement(By.xpath("//*[contains(text(), '1 King')][1]")).click();
+
+    }
+
+
+    public static  void selectRoom( )
+
+    {
 
         List<WebElement> buttons = driver.findElements(By.xpath(".//a[contains(text(),'book now')]"));
         WebElement button = buttons.get(1);
@@ -256,6 +336,7 @@ public class HotelStepDefsSupports extends BaseTestClass{
     public static  void chooseCheckoutOverlay( )
 
     {
+        waitfivesec();
         List<WebElement> buttons = driver.findElements(By.xpath("//a[contains(text(),'select room')]"));
         WebElement button = buttons.get(1);
         waitForElement(button);
