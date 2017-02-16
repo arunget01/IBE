@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49f4cd97-41fd-45fd-a625-bb807b253be8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Steps/Hotel/MarketSearch.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Steps/Hotel/MarketSearch.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/BaseTests/Hooks.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/BaseTests/BaseTestClass.class" afterPath="$PROJECT_DIR$/target/test-classes/BaseTests/BaseTestClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Steps/Hotel/HotelStepDefsSupports.class" afterPath="$PROJECT_DIR$/target/test-classes/Steps/Hotel/HotelStepDefsSupports.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BaseTests/BaseTestClass.java" afterPath="$PROJECT_DIR$/src/test/java/BaseTests/BaseTestClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BaseTests/Hooks.java" afterPath="$PROJECT_DIR$/src/test/java/BaseTests/Hooks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Features/Hotel/Hotel.feature" afterPath="$PROJECT_DIR$/src/test/java/Features/Hotel/Hotel.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Features/Hotel/Hotelfunctionalities.feature" afterPath="$PROJECT_DIR$/src/test/java/Features/Hotel/Hotelfunctionalities.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefs.java" afterPath="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefsSupports.java" afterPath="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefsSupports.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/cucumber.json" afterPath="$PROJECT_DIR$/target/cucumber.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/cucumber-pretty/formatter.js" afterPath="$PROJECT_DIR$/target/site/cucumber-pretty/formatter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/cucumber-pretty/index.html" afterPath="$PROJECT_DIR$/target/site/cucumber-pretty/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/cucumber-pretty/jquery-1.8.2.min.js" afterPath="$PROJECT_DIR$/target/site/cucumber-pretty/jquery-1.8.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/cucumber-pretty/report.js" afterPath="$PROJECT_DIR$/target/site/cucumber-pretty/report.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/cucumber-pretty/style.css" afterPath="$PROJECT_DIR$/target/site/cucumber-pretty/style.css" />
-    </list>
+    <list default="true" id="49f4cd97-41fd-45fd-a625-bb807b253be8" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotelStepDefs.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HotelStepDefs.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#796#797#0" expanded="true" />
@@ -74,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hotelfunctionalities.feature" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Hotelfunctionalities.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Features/Hotel/Hotelfunctionalities.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            <state relative-caret-position="525">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1112,8 +1093,8 @@
         <state relative-caret-position="-8">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1487288475878" expanded="true" signature="67485:67502" ph="..." />
-            <marker date="1487288475878" expanded="true" signature="67485:67548" ph="..." />
+            <marker date="1487288503647" expanded="true" signature="67395:67412" ph="..." />
+            <marker date="1487288503647" expanded="true" signature="67395:67458" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1142,16 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Hotel/MarketSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="105" column="40" lean-forward="false" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefsSupports.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1159,14 +1130,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Features/Hotel/Hotelfunctionalities.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1183,13 +1146,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#796#797#0" expanded="true" />
             <element signature="e#821#822#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Hotel/MarketSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="105" column="40" lean-forward="false" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Features/Hotel/Hotelfunctionalities.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
