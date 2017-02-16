@@ -17,6 +17,13 @@ public class BaseTestClass {
 
 
     public static void   openChromeBrowser(){
+
+//        ChromeOptions options = new ChromeOptions();---------------> To open chrome in -incognito mode
+//        options.addArguments("-incognito");
+//        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+//        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+
+
         System.setProperty("webdriver.chrome.driver", "src/main/java/chromedriver.exe");
 
         driver = new ChromeDriver();

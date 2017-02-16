@@ -26,11 +26,11 @@ public class HotelStepDefs extends BaseTestClass {
         //HotelStepDefsFunctions.loadLandingPages();
      //
     }  */
-  // @After
+   @After
 
- //  public static void quitallchrome(){
-  //     driver.quit();
-  // }
+ public static void quitallchrome(){
+     driver.quit();
+   }
 
     // 1st step
     @Given("^user go to landing page$")
