@@ -17,11 +17,11 @@ Feature: Hotel Features
   Then  Verify Itinerary Page
   And Continue to Checkout
    And Check the room details added to cart as Room "1" and Guests "2"
-#    And Remove room
-#    And  Update room in cart
-#    And Continue to Checkout
-#    And Payment Page
-#    And Fill Up the Guest Details
+   And Remove room
+   And  Update room in cart
+   And Select room 'Forum Classic Room'
+   And Continue to Checkout
+  And Verify Payment Page
 
 
 

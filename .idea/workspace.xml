@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49f4cd97-41fd-45fd-a625-bb807b253be8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Features/Hotel/Hotel.feature" afterPath="$PROJECT_DIR$/src/test/java/Features/Hotel/Hotel.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefs.java" afterPath="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefs.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefsSupports.java" afterPath="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefsSupports.java" />
@@ -21,21 +20,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Hotel.feature" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hotel.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Features/Hotel/Hotel.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state relative-caret-position="85">
+              <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotelStepDefs.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HotelStepDefs.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="204" column="65" lean-forward="false" selection-start-line="204" selection-start-column="65" selection-end-line="204" selection-end-column="65" />
+            <state relative-caret-position="171">
+              <caret line="61" column="54" lean-forward="false" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,8 +55,8 @@
       <file leaf-file-name="HotelStepDefsSupports.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefsSupports.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="290" column="9" lean-forward="false" selection-start-line="290" selection-start-column="9" selection-end-line="290" selection-end-column="9" />
+            <state relative-caret-position="229">
+              <caret line="374" column="0" lean-forward="true" selection-start-line="374" selection-start-column="0" selection-end-line="374" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,9 +131,9 @@
         <option value="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelFunctionalitiesStepDef.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseTests/BaseTestClass.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseTests/Hooks.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefsSupports.java" />
         <option value="$PROJECT_DIR$/src/test/java/Features/Hotel/Hotel.feature" />
         <option value="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefs.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefsSupports.java" />
       </list>
     </option>
   </component>
@@ -649,39 +648,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 16h 09m 42s.xml">
+    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 18h 20m 24s.xml">
       <configuration name="Scenario: Flexible dates Search for market" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 16h 12m 22s.xml">
+    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 18h 24m 18s.xml">
       <configuration name="Scenario: Flexible dates Search for market" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 16h 13m 37s.xml">
+    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 18h 26m 18s.xml">
       <configuration name="Scenario: Flexible dates Search for market" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 16h 15m 01s.xml">
+    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 18h 37m 33s.xml">
       <configuration name="Scenario: Flexible dates Search for market" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 16h 15m 54s.xml">
+    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 18h 39m 48s.xml">
       <configuration name="Scenario: Flexible dates Search for market" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 16h 19m 15s.xml">
+    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 18h 43m 25s.xml">
       <configuration name="Scenario: Flexible dates Search for market" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 16h 22m 03s.xml">
+    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 18h 45m 18s.xml">
       <configuration name="Scenario: Flexible dates Search for market" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 16h 25m 30s.xml">
+    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 18h 47m 39s.xml">
       <configuration name="Scenario: Flexible dates Search for market" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 16h 28m 06s.xml">
+    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.16 at 09h 45m 44s.xml">
       <configuration name="Scenario: Flexible dates Search for market" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.15 at 16h 33m 06s.xml">
+    <history-entry file="Scenario__Flexible_dates_Search_for_market - 2017.02.16 at 09h 58m 41s.xml">
       <configuration name="Scenario: Flexible dates Search for market" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -694,7 +693,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30708662" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4488189" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -886,20 +885,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="204" column="65" lean-forward="false" selection-start-line="204" selection-start-column="65" selection-end-line="204" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefsSupports.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="290" column="9" lean-forward="false" selection-start-line="290" selection-start-column="9" selection-end-line="290" selection-end-column="9" />
+        <state relative-caret-position="229">
+          <caret line="374" column="0" lean-forward="true" selection-start-line="374" selection-start-column="0" selection-end-line="374" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -908,9 +897,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Features/Hotel/Hotel.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="85">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Steps/Hotel/HotelStepDefs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="61" column="54" lean-forward="false" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
