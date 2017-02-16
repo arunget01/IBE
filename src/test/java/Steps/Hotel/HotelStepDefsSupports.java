@@ -136,6 +136,20 @@ public class HotelStepDefsSupports extends BaseTestClass{
     }
 
 
+
+    public static void verifyPaymentPage() {
+
+        ExplicitlyWaitforElementText( "//*[contains(text(), 'BILLING INFORMATION')]");
+        String listf = driver.findElement(By.xpath("//*[contains(text(), 'BILLING INFORMATION')]")).getText();
+        Assert.assertEquals(listf,"BILLING INFORMATION","Total not found!");
+        String listsg = driver.findElement(By.xpath("//*[contains(text(), 'GUEST INFORMATION')]")).getText();
+        Assert.assertEquals(listsg,"GUEST INFORMATION","Taxes not found!");
+
+    }
+
+
+
+
         public static void verifyFlexCal(){
 
 
@@ -254,7 +268,7 @@ public class HotelStepDefsSupports extends BaseTestClass{
 
     {
 
-        int pip = 2;
+        int pip = rccounts;
 
         boolean r =false;
         int m;
@@ -313,16 +327,71 @@ public class HotelStepDefsSupports extends BaseTestClass{
     public static  void selectRoomOptions( )
 
     {
-         waitfivesec();
-        driver.findElement(By.xpath("//*[contains(text(), '1 King')][1]")).click();
+
+        ExplicitlyWaitforElementText( "//*[contains(text(), 'See all')]");
+        waitfivesec();
+
+        List<WebElement> buttons = driver.findElements(By.xpath("//*[contains(text(), '1 King')][1]"));
+        System.out.println("First---------------");
+        WebElement button = buttons.get(0);
+       // waitForElement(button);
+        button.click();
+        System.out.println("Click---------------");
+
+
 
     }
+    public static  void updateRoomOptions( )
+
+    {
+        System.out.println("MMMMWaitttttttttttt---------------");
+
+        ExplicitlyWaitforElementText( "//*[contains(text(), '1 King')]");
+        waitforgiventime(10);
+
+        List<WebElement> buttonsx = driver.findElements(By.xpath("//*[contains(text(), '1 King')][1]"));
+        System.out.println("MMMMFirst---------------");
+        WebElement buttond = buttonsx.get(0);
+        // waitForElement(button);
+        buttond.click();
+        System.out.println("MMMMMClick---------------");
+
+
+
+    }
+
+
+    public static  void removeRoom( )
+
+    {
+        ExplicitlyWaitforElementText( "//*[contains(text(), 'Remove')]");
+
+        driver.findElement(By.xpath("//*[contains(text(), 'Remove')]")).click();
+        ExplicitlyWaitforElementText( "//*[contains(text(), 'REMOVE')]");
+        driver.findElement(By.xpath("//*[contains(text(), 'REMOVE')]")).click();
+        System.out.println("Removeddddddddddd---------------");
+        ExplicitlyWaitforElementText( "//*[contains(text(), 'See all')]");
+
+
+    }
+
 
 
     public static  void selectRoom( )
 
     {
+        ExplicitlyWaitforElementText(".//a[contains(text(),'book now')]");
+        List<WebElement> buttons = driver.findElements(By.xpath(".//a[contains(text(),'book now')]"));
+        WebElement button = buttons.get(1);
+        waitForElement(button);
+        button.click();
+        ExplicitlyWaitforlinkText("Remove");
 
+    }
+    public static  void selectRooms( )
+
+    {
+        ExplicitlyWaitforElementText(".//a[contains(text(),'book now')]");
         List<WebElement> buttons = driver.findElements(By.xpath(".//a[contains(text(),'book now')]"));
         WebElement button = buttons.get(1);
         waitForElement(button);
@@ -332,11 +401,12 @@ public class HotelStepDefsSupports extends BaseTestClass{
     }
 
 
-
     public static  void chooseCheckoutOverlay( )
 
     {
         waitfivesec();
+        ExplicitlyWaitforElementText("//a[contains(text(),'select room')]");
+
         List<WebElement> buttons = driver.findElements(By.xpath("//a[contains(text(),'select room')]"));
         WebElement button = buttons.get(1);
         waitForElement(button);

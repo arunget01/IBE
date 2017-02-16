@@ -52,7 +52,8 @@ public class HotelStepDefs extends BaseTestClass {
     @And("^Update room in cart$")
     public void updateRoomInCart() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        HotelStepDefsSupports.updateRoomOptions();
+
     }
 
     @When("^User Selects Flexible Date Search$")
@@ -141,14 +142,11 @@ public class HotelStepDefs extends BaseTestClass {
     @And("^Remove room$")
     public void removeRoom() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        HotelStepDefsSupports.removeRoom();
+
     }
 
-    @And("^Payment Page$")
-    public void paymentPage() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
+
 
     @And("^Fill Up the Guest Details$")
     public void fillUpTheGuestDetails() throws Throwable {
@@ -204,6 +202,12 @@ public class HotelStepDefs extends BaseTestClass {
     @And("^Check the room details added to cart as Room \"([^\"]*)\" and Guests \"([^\"]*)\"$")
     public void checkTheRoomDetailsAddedToCartAsRoomAndGuests(int roomc, String guestc) throws Throwable {
         HotelStepDefsSupports.verifyroomguests( roomc, guestc);
+    }
+
+    @And("^Verify Payment Page$")
+    public void verifyPaymentPage() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.verifyPaymentPage();
     }
 }
 
