@@ -346,9 +346,9 @@ public class HotelStepDefsSupports extends BaseTestClass{
     {
         System.out.println("MMMMWaitttttttttttt---------------");
 
-        ExplicitlyWaitforElementText( "//*[contains(text(), '1 King')]");
+        ExplicitlyWaitforElementText( "//*[contains(text(), 'View Total')]");
         waitforgiventime(10);
-
+        ExplicitlyWaitforlinkText( "View Total");
         List<WebElement> buttonsx = driver.findElements(By.xpath("//*[contains(text(), '1 King')][1]"));
         System.out.println("MMMMFirst---------------");
         WebElement buttond = buttonsx.get(0);
