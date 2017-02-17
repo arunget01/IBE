@@ -26,11 +26,11 @@ public class HotelStepDefs extends BaseTestClass {
         //HotelStepDefsFunctions.loadLandingPages();
      //
     }  */
-   @After
-
- public static void quitallchrome(){
-     driver.quit();
-   }
+//   @After
+//
+// public static void quitallchrome(){
+//     driver.quit();
+//   }
 
     // 1st step
     @Given("^user go to landing page$")
@@ -208,6 +208,24 @@ public class HotelStepDefs extends BaseTestClass {
     public void verifyPaymentPage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         HotelStepDefsSupports.verifyPaymentPage();
+    }
+
+    @And("^Select Property \"([^\"]*)\"$")
+    public void selectProperty(String locations) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.selectLocation(locations);
+    }
+
+    @And("^Select Dates from the calendar$")
+    public void selectDatesFromTheCalendar() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.selectAnyRateCal();
+    }
+
+    @And("^Click on Select Room$")
+    public void clickOnSelectRoom() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.clickSelectRoom();
     }
 }
 

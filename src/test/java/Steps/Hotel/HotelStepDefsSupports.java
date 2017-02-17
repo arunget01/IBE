@@ -223,6 +223,15 @@ public class HotelStepDefsSupports extends BaseTestClass {
 
     }
 
+    public static void selectLocation(String locvalue)
+
+    {  waitforgiventime(3);
+        Select dropdown = new Select(driver.findElement(By.id("property")));
+        dropdown.selectByVisibleText(locvalue);
+
+    }
+
+
 
 
     public static  void continueCheckOut( )
@@ -288,6 +297,26 @@ public class HotelStepDefsSupports extends BaseTestClass {
     {
         Select dropdown = new Select(driver.findElement(By.id("location")));
         dropdown.selectByVisibleText(marketvalue);
+
+    }
+
+    public static void selectAnyRateCal()
+
+    {
+       ExplicitlyWaitforElementText(".//*/p[contains(text(),'$')]");
+        List<WebElement> buttons = driver.findElements(By.xpath(".//*/p[contains(text(),'$')]"));
+        WebElement chk = buttons.get(1);
+        chk.click();
+        waittwosec();
+        WebElement chkd = buttons.get(2);
+        chkd.click();
+        }
+
+    public static void clickSelectRoom()
+
+    {
+        ExplicitlyWaitforElementText(".//*[@id='btngreen_roomList']");
+        driver.findElement(By.xpath(".//*[@id='btngreen_roomList']")).click();
 
     }
 
