@@ -233,6 +233,52 @@ public class HotelStepDefsSupports extends BaseTestClass {
 
 
 
+    public static void checkRoomAdded()
+
+    {
+        String  listfs = driver.findElement(By.xpath(".//*[contains(text(),'Room Upgrade')]")).getText();
+        Assert.assertEquals(listfs,"Room Upgrade Discount","Room Upgrade not found!");
+
+    }
+
+    public static  void continueUpgrade( ) throws Exception
+
+    {
+
+        ExplicitlyWaitforlinkText("Remove");
+        try {
+            String listf = driver.findElement(By.xpath(".//a[contains(text(),'Upgrade')]")).getText();
+            Assert.assertEquals(listf,"UPGRADE","Total not found!");
+            System.out.println("Asserted Text");
+
+            List<WebElement> buttons = driver.findElements(By.xpath(".//a[contains(text(),'Upgrade')]"));
+            System.out.println("List saved ");
+
+            WebElement button = buttons.get(0);
+            waitForElement(button);
+            button.click();
+            System.out.println("ALl Clicked");
+            ExplicitlyWaitforlinkText("Undo?");
+
+
+
+
+        }
+
+        catch(Exception e)
+
+        {
+
+            Assert.assertEquals(false,"Upgrade Error");
+            throw (e);
+        }
+
+
+
+
+    }
+
+
 
     public static  void continueCheckOut( )
 

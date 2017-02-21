@@ -3,6 +3,7 @@ package Steps.Hotel;
 import BaseTests.BaseTestClass;
 import cucumber.api.PendingException;
 import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -26,11 +27,11 @@ public class HotelStepDefs extends BaseTestClass {
         //HotelStepDefsFunctions.loadLandingPages();
      //
     }  */
-//   @After
-//
-// public static void quitallchrome(){
-//     driver.quit();
-//   }
+   @After
+
+ public static void quitallchrome(){
+     driver.quit();
+   }
 
     // 1st step
     @Given("^user go to landing page$")
@@ -226,6 +227,30 @@ public class HotelStepDefs extends BaseTestClass {
     public void clickOnSelectRoom() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         HotelStepDefsSupports.clickSelectRoom();
+    }
+
+
+    @And("^Select room Fab Room  (\\d+) King  Non-Smoking$")
+    public void selectRoomFabRoomKingNonSmoking(int arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.selectRoom();
+    }
+
+
+
+    @And("^Select a room from UPSELL listing and click Upgrade$")
+    public void selectARoomFromUPSELLListingAndClickUpgrade() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.continueUpgrade();
+    }
+
+
+
+
+    @Then("^Check whether the room added was upgraded with the new room$")
+    public void checkWhetherTheRoomAddedWasUpgradedWithTheNewRoom() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.checkRoomAdded();
     }
 }
 
