@@ -297,7 +297,19 @@ public class HotelStepDefsSupports extends BaseTestClass {
 
     public static void verifyItinPage() {
 
-        ExplicitlyWaitforElementText( "//*[contains(text(), 'Hotel added')]");
+        ExplicitlyWaitforlinkText("Remove");
+        String listf = driver.findElement(By.xpath("//*[contains(text(), 'Total:')]")).getText();
+        Assert.assertEquals(listf,"Total:","Total not found!");
+        String listsg = driver.findElement(By.xpath("//*[contains(text(), 'Taxes')]")).getText();
+        Assert.assertEquals(listsg,"Taxes:","Taxes not found!");
+
+    }
+
+
+
+    public static void verifyItinPageMroom() {
+
+ExplicitlyWaitforlinkText("Remove");
         String listf = driver.findElement(By.xpath("//*[contains(text(), 'Total:')]")).getText();
         Assert.assertEquals(listf,"Total:","Total not found!");
         String listsg = driver.findElement(By.xpath("//*[contains(text(), 'Taxes')]")).getText();
