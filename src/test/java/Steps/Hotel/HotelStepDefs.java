@@ -27,11 +27,11 @@ public class HotelStepDefs extends BaseTestClass {
         //HotelStepDefsFunctions.loadLandingPages();
      //
     }  */
-   @After
-
- public static void quitallchrome(){
-     driver.quit();
-   }
+//   @After
+//
+// public static void quitallchrome(){
+//     driver.quit();
+//   }
 
     // 1st step
     @Given("^user go to landing page$")
@@ -126,7 +126,7 @@ public class HotelStepDefs extends BaseTestClass {
     @Then("^Verify Itinerary Page$")
     public void verifyItineraryPage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        HotelStepDefsSupports.verifyItinPage();
+        HotelStepDefsSupports.verifyItinPageMroom();
     }
 
     @And("^Continue to Checkout$")
