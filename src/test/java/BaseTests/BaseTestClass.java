@@ -28,6 +28,7 @@ public class BaseTestClass {
 
         driver = new ChromeDriver();
         System.out.println("Base ran:");
+        driver.manage().deleteAllCookies();
 
         //return driver;
     }
