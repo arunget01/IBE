@@ -305,7 +305,55 @@ public class HotelStepDefsSupports extends BaseTestClass {
 
     }
 
+    public static void verifyItinPageMultiRoom() {
 
+        ExplicitlyWaitforElementText( "//*[contains(text(), 'Hotel added')]");
+        String listf = driver.findElement(By.xpath("//*[contains(text(), 'Total:')]")).getText();
+        Assert.assertEquals(listf,"Total:","Total not found!");
+        String listsg = driver.findElement(By.xpath("//*[contains(text(), 'Taxes')]")).getText();
+        Assert.assertEquals(listsg,"Taxes:","Taxes not found!");
+
+    }
+
+
+
+    public static void verifyCartHasnRooms(int nroomm) {
+
+
+
+        int jk = nroomm;
+        boolean c = false;
+        ExplicitlyWaitforElementText( "//*[contains(text(), 'Grand Total:')]");
+        List<WebElement> buttons = driver.findElements(By.xpath("//dt"));
+        int o = buttons.size();
+        int oo =0;
+
+        java.util.Iterator<WebElement> i = buttons.iterator();
+        while (i.hasNext()) {
+            WebElement row = i.next();
+            System.out.println("");
+            String vl = row.getText();
+           if( vl.contains("Room "+jk+":"))
+
+           {
+               c = true;
+               System.out.println("Vale of button Size" );
+
+               break;
+           }
+
+//            if (!i.hasNext()) {
+//            Assert.assertTrue(false, "Room 2 not showing");
+//                System.out.println("inside if loooooooooop");
+//
+//            }
+
+        oo = oo+1;}
+
+        if ( c==false){            Assert.assertTrue(false, "Room "+nroomm+" not showing");
+        }
+
+    }
 
     public static void verifyPaymentPage() {
 

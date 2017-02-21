@@ -252,5 +252,17 @@ public class HotelStepDefs extends BaseTestClass {
         // Write code here that turns the phrase above into concrete actions
         HotelStepDefsSupports.checkRoomAdded();
     }
+
+    @And("^Verify Itinerary Page for multi room$")
+    public void verifyItineraryPageForMultiRoom() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.verifyItinPageMultiRoom();
+    }
+
+    @And("^Verify Cart has \"([^\"]*)\" room$")
+    public void verifyCartHasRoom(int nrooms) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.verifyCartHasnRooms(nrooms);
+    }
 }
 

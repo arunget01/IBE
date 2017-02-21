@@ -47,6 +47,23 @@ Then Check whether the room added was upgraded with the new room
 
 
 
+Scenario: Multi Room Search
+
+  Given User is in landing page
+  And Select Market - "Las Vegas"
+  And Select Property "Flamingo Las Vegas"
+  And  User enter Checkin & Checkout dates
+  And Room count "2"
+  And Guest "2" Adults,  "1" Children
+  And Click on Search
+  And  User  verify Room Listing Page
+  And  User select accessibility filter
+  And  User select Room
+    Then  Verify Itinerary Page
+  And Continue to Checkout
+  And Check the room details added to cart as Room "2" and Guests "2"
+  And  Verify Cart has "2" room
+  And Verify Payment Page
 
 
 
