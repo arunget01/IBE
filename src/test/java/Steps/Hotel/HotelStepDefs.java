@@ -60,7 +60,7 @@ public class HotelStepDefs extends BaseTestClass {
     @When("^User Selects Flexible Date Search$")
     public void userSelectsFlexibleDateSearch() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        HotelStepDefsSupports.openlandingpageRavail();
+       // HotelStepDefsSupports.openlandingpageRavail();
         HotelStepDefsSupports.selectFlexDateRadio();
     }
 
@@ -263,6 +263,25 @@ public class HotelStepDefs extends BaseTestClass {
     public void verifyCartHasRoom(int nrooms) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         HotelStepDefsSupports.verifyCartHasnRooms(nrooms);
+    }
+
+
+    @Given("^Open \"([^\"]*)\" enableshow=hr$")
+    public void openEnableshowHr(String hrurl) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.openURL(hrurl);
+    }
+
+    @Given("^User opens given ([^\"]*)$")
+    public void userOpensGivenUrls(String hrurl) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.openURL(hrurl);
+    }
+
+    @And("^Verify flex property listing page$")
+    public void verifyFlexPropertyListingPage() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.verifyFlexPropertyCal();
     }
 }
 
