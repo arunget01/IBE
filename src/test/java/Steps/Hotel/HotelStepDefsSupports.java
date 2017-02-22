@@ -76,7 +76,6 @@ public class HotelStepDefsSupports extends BaseTestClass {
     public static void openURL(String urlname)
 
     {
-        openChromeBrowser();
         driver.manage().window().maximize();
         driver.get(readProp(urlname));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

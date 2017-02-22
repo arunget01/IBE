@@ -36,7 +36,8 @@ public class HotelStepDefs extends BaseTestClass {
     // 1st step
     @Given("^user go to landing page$")
     public void userGoToLandingPage() throws Throwable {
-        openChromeBrowser();
+        //openChromeBrowser();
+        openBrowser("firefox");
         HotelStepDefsSupports.openlandingpage();
     }
 
