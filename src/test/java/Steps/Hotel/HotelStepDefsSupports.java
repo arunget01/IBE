@@ -1,7 +1,9 @@
 package Steps.Hotel;
 
 import BaseTests.BaseTestClass;
+import BaseTests.BasicProperties.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,6 +13,9 @@ import org.testng.Assert;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import static BaseTests.BasicProperties.readProp;
+import static java.lang.System.getProperty;
 
 /**
  * Created by ADMIN on 1/20/2017.
@@ -67,6 +72,19 @@ public class HotelStepDefsSupports extends BaseTestClass {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
+
+    public static void openURL(String urlname)
+
+    {
+        openChromeBrowser();
+        driver.manage().window().maximize();
+        driver.get(readProp(urlname));
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        ExplicitlyWaitforlinkText("Privacy");
+
+    }
+
+
 
 
     public static void userEnterCheckinCheckoutDates()
@@ -398,6 +416,59 @@ ExplicitlyWaitforlinkText("Remove");
     }
 
 
+    public boolean isElementPresent(By locatorKey) {
+        try {
+            driver.findElement(locatorKey);
+            return true;
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public static boolean isElementVisible(String xpathlocator){
+        try
+        {
+            driver.findElement(By.xpath(xpathlocator));
+            return false;
+        } catch (NoSuchElementException e) {
+            System.out.println("Element absent");
+            return true;
+        }
+
+
+    }
+
+
+    public static void verifyFlexPropertyCal() {
+
+
+        ExplicitlyWaitforElementText("//*[contains(text(), 'Reviews')]");
+        String urlnow = driver.getCurrentUrl();
+        System.out.println("Curent url is"+urlnow);
+        if(urlnow.contains("roomavailability=true"))
+        {
+            String  listfs = driver.findElement(By.xpath("//*[contains(text(), 'GRID')]")).getText();
+            Assert.assertEquals(listfs ,"GRID","GRID not displayed");
+            String  listfis = driver.findElement(By.xpath("//*[contains(text(), 'LIST')]")).getText();
+            Assert.assertEquals(listfis ,"LIST","LIST not displayed");
+            String  listfisi = driver.findElement(By.xpath("//*[contains(text(), 'CALENDAR')]")).getText();
+            Assert.assertEquals(listfisi ,"CALENDAR","CALENDAR not displayed");
+        }
+        else
+        {        boolean value = isElementVisible("//*[contains(text(), 'GRID')]");
+            Assert.assertTrue(value,"GRID is displayed in Non Room Availability Branch");
+            boolean valuex = isElementVisible("//*[contains(text(), 'LIST')]");
+            Assert.assertTrue(valuex,"LIST is displayed in Non Room Availability Branch");
+            boolean valuey = isElementVisible("//*[contains(text(), 'CALENDAR')]");
+            Assert.assertTrue(valuey,"CALENDAR is displayed in Non Room Availability Branch");
+        }
+
+
+
+
+    }
+
+
     public static void screenshot(String marketvalue)
 
     {
@@ -470,7 +541,7 @@ ExplicitlyWaitforlinkText("Remove");
     }
 
     public static void ExplicitlyWaitforlinkText(String text) {
-        (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.linkText(text)));
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.linkText(text)));
 
     }
 
@@ -592,6 +663,7 @@ ExplicitlyWaitforlinkText("Remove");
         ExplicitlyWaitforElementText( "//*[contains(text(), 'View Total')]");
         waitforgiventime(10);
         ExplicitlyWaitforlinkText( "View Total");
+        ExplicitlyWaitforElementText( "//*[contains(text(), '1 King')][1]");
         List<WebElement> buttonsx = driver.findElements(By.xpath("//*[contains(text(), '1 King')][1]"));
         System.out.println("MMMMFirst---------------");
         WebElement buttond = buttonsx.get(0);
@@ -700,7 +772,7 @@ ExplicitlyWaitforlinkText("Remove");
 
     private static void waitForElement(WebElement element) {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.elementToBeClickable(element));
         System.out.println(element.isEnabled() + "  +++++++++++++++++++++++++++++++++++++ " + element.isDisplayed());
     }
