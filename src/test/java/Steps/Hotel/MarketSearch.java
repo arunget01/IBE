@@ -4,6 +4,8 @@ import BaseTests.BaseTestClass;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 /**
  * Created by asashidharan on 2/13/2017.
@@ -85,10 +87,10 @@ public class MarketSearch extends BaseTestClass {
 //        HotelStepDefsSupports.userRemoveRoomFromCart();
 
 
-//    @And("^User upgrade room in cart$")
-//    public void userUpgradeRoomInCart() throws Throwable {
-//        HotelStepDefsSupports.userUpgradeRoomInCart();
-//    }
+    @And("^User upgrade room in cart$")
+    public void userUpgradeRoomInCart() throws Throwable {
+        HotelStepDefsSupports.userUpgradeRoomInCart();
+    }
 
 
     @And("^User click on continue to Checkout$")
@@ -110,4 +112,90 @@ public class MarketSearch extends BaseTestClass {
     }
 
 
+    @And("^User remove room from cart$")
+    public void userRemoveRoomFromCart() throws Throwable {
+
+        HotelStepDefsSupports.userRemoveRoomFromCart();
+
+
+
+    }
+
+    @Then("^User verify the payment page$")
+    public void userVerifyThePaymentPage() throws Throwable {
+
+        HotelStepDefsSupports.userVerifyThePaymentPage();
+
+
+
+    }
+
+    @And("^User select room filters$")
+    public void userSelectRoomFilters() throws Throwable {
+
+        HotelStepDefsSupports.userSelectRoomFilters();
+
+
+
+    }
+
+    @And("^User add restaurant to cart$")
+    public void userAddRestaurantToCart() throws Throwable {
+
+
+        HotelStepDefsSupports.userAddRestaurantToCart();
+
+
+    }
+
+    @And("^User select the Month$")
+    public void userSelectTheMonth() throws Throwable {
+
+        HotelStepDefsSupports.selectMonth(1);//selects upcoming month
+
+    }
+
+    @And("^User select Dates from the calendar$")
+    public void userSelectDatesFromTheCalendar() throws Throwable {
+
+        HotelStepDefsSupports.userSelectDatesFromTheCalendar();
+
+    }
+
+    @And("^User click on Get Trip price button$")
+    public void userClickOnGetTripPriceButton() throws Throwable {
+
+        HotelStepDefsSupports.userClickOnGetTripPriceButton();
+
+
+
+
+    }
+
+    @When("^User Select Flexible Date Search$")
+    public void userSelectFlexibleDateSearch() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.selectFlexDateRadio();
+    }
+
+    @And("^User click on Book it from pricing details overlay$")
+    public void userClickOnBookItFromPricingDetailsOverlay() throws Throwable {
+
+        HotelStepDefsSupports.userClickOnBookItFromPricingDetailsOverlay();
+
+
+
+
+    }
+
+    @And("^Verify whether the Deal applied banner is shown in Rate Calendar page$")
+    public void verifyWhetherTheDealAppliedBannerIsShownInRateCalendarPage() throws Throwable {
+
+        HotelStepDefsSupports.verifyWhetherTheDealAppliedBannerIsShownInRateCalendarPage();
+
+
+    }
 }
+
+
+
