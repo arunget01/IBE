@@ -231,6 +231,7 @@ public class HotelStepDefs extends BaseTestClass {
     }
 
 
+
     @And("^Select room Fab Room  (\\d+) King  Non-Smoking$")
     public void selectRoomFabRoomKingNonSmoking(int arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
@@ -285,4 +286,7 @@ public class HotelStepDefs extends BaseTestClass {
         HotelStepDefsSupports.verifyFlexPropertyCal();
     }
 }
+
+
+
 

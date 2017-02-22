@@ -23,14 +23,10 @@ public class HotelStepDefsFunctions extends BaseTestClass{
 
     {
         //initalizedriver();
-        driver.get("https://www.totalrewards.com/reserve/");
+        driver.get("https://www.totalrewards.com/reserve/?roomavailability=false");
         ExplicitWait(driver, "Why book direct");
 
     }
-
-
-
-
 
     public static void loadLandingPages()
 

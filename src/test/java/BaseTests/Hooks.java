@@ -8,11 +8,12 @@ import cucumber.api.java.After;
 public class Hooks extends BaseTestClass {
 
 
-//   @After
-//
-//    public static void quitallchrome(){
-//        driver.quit();
-//    }
+   @After
 
+
+   public static void quitallchrome(){
+       driver.manage().deleteAllCookies();
+        driver.quit();
+    }
 
 }
