@@ -285,6 +285,13 @@ public class HotelStepDefs extends BaseTestClass {
         // Write code here that turns the phrase above into concrete actions
         HotelStepDefsSupports.verifyFlexPropertyCal();
     }
+
+    @Given("^User tests in given ([^\"]*)$")
+    public void userTestsInGivenBrowsers(String browsers) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.openBrowser(browsers);
+    }
+
 }
 
 
