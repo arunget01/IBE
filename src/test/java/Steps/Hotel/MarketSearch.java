@@ -13,12 +13,12 @@ import cucumber.api.java.en.When;
 public class MarketSearch extends BaseTestClass {
 
 
-    @Given("^User is in landing page$")
-    public void userIsInLandingPage() throws Throwable {
-
-        HotelStepDefsSupports.openlandingpage();
-
-    }
+//    @Given("^User is in landing page$")
+//    public void userIsInLandingPage() throws Throwable {
+//
+//        HotelStepDefsSupports.openlandingpage();
+//
+//    }
 
     @And("^User enter Checkin & Checkout dates$")
     public void userEnterCheckinCheckoutDates() throws Throwable {
@@ -124,7 +124,7 @@ public class MarketSearch extends BaseTestClass {
     @Then("^User verify the payment page$")
     public void userVerifyThePaymentPage() throws Throwable {
 
-        HotelStepDefsSupports.userVerifyThePaymentPage();
+        HotelStepDefsSupports.userClickPopup();
 
 
 

@@ -1,6 +1,7 @@
 package Steps.Hotel;
 
 import BaseTests.BaseTestClass;
+import BaseTests.BaseTestClass.*;
 import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -34,12 +35,12 @@ public class HotelStepDefs extends BaseTestClass {
 //   }
 
     // 1st step
-    @Given("^user go to landing page$")
-    public void userGoToLandingPage() throws Throwable {
-        //openChromeBrowser();
-        openBrowser("firefox");
-        HotelStepDefsSupports.openlandingpage();
-    }
+//    @Given("^user go to landing page$")
+//    public void userGoToLandingPage() throws Throwable {
+//        //openChromeBrowser();
+//        //openBrowser("firefox");
+//        HotelStepDefsSupports.openlandingpage();
+//    }
 
 
     //2nd step
@@ -209,6 +210,7 @@ public class HotelStepDefs extends BaseTestClass {
     @And("^Verify Payment Page$")
     public void verifyPaymentPage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.userClickPopup();
         HotelStepDefsSupports.verifyPaymentPage();
     }
 
@@ -292,6 +294,11 @@ public class HotelStepDefs extends BaseTestClass {
         HotelStepDefsSupports.openBrowser(browsers);
     }
 
+    @And("^User close browser$")
+    public void userCloseBrowser() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.quitallchrome();
+    }
 }
 
 
