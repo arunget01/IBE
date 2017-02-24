@@ -299,6 +299,23 @@ public class HotelStepDefs extends BaseTestClass {
         // Write code here that turns the phrase above into concrete actions
         HotelStepDefsSupports.quitallchrome();
     }
+
+    @And("^Select any Room$")
+    public void selectAnyRoom() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.selectAnyRatesBookNowBtnListingPage();    }
+
+    @Then("^Check whether user able to see the Refundable and Non Refundable rates in the listing page$")
+    public void checkWhetherUserAbleToSeeTheRefundableAndNonRefundableRatesInTheListingPage() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.verifyNonRefundableListing();
+    }
+
+    @Then("^Check whether user able to view the ratings and review details for all properties from the list$")
+    public void checkWhetherUserAbleToViewTheRatingsAndReviewDetailsForAllPropertiesFromTheList() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.verifyRatingandReview();
+    }
 }
 
 

@@ -145,6 +145,26 @@ public class HotelStepDefsSupports extends BaseTestClass {
 
     }
 
+    public static void verifyNonRefundableListing() {
+
+        List<WebElement> listse = driver.findElements(By.xpath(".//*[text()[contains(.,'Refundable')]]"));
+        Assert.assertTrue(listse.size() > 0, "Non-Refundable text not found");
+
+    }
+
+
+
+    public static void verifyRatingandReview() {
+
+        List<WebElement> listse = driver.findElements(By.xpath(".//*[text()[contains(.,'Reviews')]]"));
+        Assert.assertTrue(listse.size() > 0, "Review  text not found");
+
+        List<WebElement> listsed = driver.findElements(By.xpath(".//*[@class='large-star-full']"));
+        Assert.assertTrue(listsed.size() > 0, "Review  text not found");
+
+    }
+
+
     public static void userSelectRoomFilters() {
 
         ExplicitlyWaitforElementText("//*[contains(text(), 'See all')]");
@@ -800,6 +820,24 @@ public static void openBrowser(String brname){
 
 
     }
+
+
+
+    public static void selectAnyRatesBookNowBtnListingPage()
+
+    {
+
+        ExplicitlyWaitforElementText("//*[contains(text(), 'See all')]");
+        waitfivesec();
+
+        List<WebElement> buttons = driver.findElements(By.xpath("//*[contains(text(), 'BOOK NOW')]"));
+        WebElement button = buttons.get(0);
+        // waitForElement(button);
+        button.click();
+
+
+    }
+
 
     public static void updateRoomOptions()
 
