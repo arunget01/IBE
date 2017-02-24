@@ -1,7 +1,8 @@
 Feature:  Exact Date Market Search
 
-  Scenario: Market Search
-    Given User is in landing page
+  Scenario Outline: Market Search
+    Given User tests in given <browsers>
+    Given User opens given <urls>
     And Select Market - "Las Vegas"
     And  User enter Checkin & Checkout dates
     And Room count "2"
@@ -22,10 +23,16 @@ Feature:  Exact Date Market Search
 #   And  User upgrade room in cart
     And  User click on continue to Checkout
     Then User verify the payment page
+    And User close browser
+    Examples:
+      |urls|browsers|
+      |urlroomavailfalse|chrome|
+      |urlroomavailtrue|chrome|
 
 
-  Scenario: Property Search- Exact Date Property Search
-    Given User is in landing page
+  Scenario Outline: Property Search- Exact Date Property Search
+    Given User tests in given <browsers>
+    Given User opens given <urls>
     And Select Market - "Las Vegas"
     And Select Property "Flamingo Las Vegas"
     And  User enter Checkin & Checkout dates
@@ -47,10 +54,16 @@ Feature:  Exact Date Market Search
 #   And  User upgrade room in cart
     And  User click on continue to Checkout
     Then User verify the payment page
+    And User close browser
+    Examples:
+      |urls|browsers|
+      |urlroomavailfalse|chrome|
+      |urlroomavailtrue|chrome|
 
 
-  Scenario: Room Type Calendar search- Flexible date search for specific property Search (Room Type Calendar)
-    Given User is in landing page
+  Scenario Outline: Room Type Calendar search- Flexible date search for specific property Search (Room Type Calendar)
+    Given User tests in given <browsers>
+    Given User opens given <urls>
     When User Select Flexible Date Search
     And Select Market - "Las Vegas"
     And Select Property "Flamingo Las Vegas"
@@ -67,6 +80,11 @@ Feature:  Exact Date Market Search
 #    And  User adds BoB Voucher to cart
      And  User click on continue to Checkout
      Then User verify the payment page
+    And User close browser
+    Examples:
+      |urls|browsers|
+      |urlroomavailfalse|chrome|
+      |urlroomavailtrue|chrome|
 
 
 

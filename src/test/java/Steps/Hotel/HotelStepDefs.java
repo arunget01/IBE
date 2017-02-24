@@ -1,6 +1,7 @@
 package Steps.Hotel;
 
 import BaseTests.BaseTestClass;
+import BaseTests.BaseTestClass.*;
 import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -34,12 +35,12 @@ public class HotelStepDefs extends BaseTestClass {
 //   }
 
     // 1st step
-    @Given("^user go to landing page$")
-    public void userGoToLandingPage() throws Throwable {
-        //openChromeBrowser();
-        openBrowser("firefox");
-        HotelStepDefsSupports.openlandingpage();
-    }
+//    @Given("^user go to landing page$")
+//    public void userGoToLandingPage() throws Throwable {
+//        //openChromeBrowser();
+//        //openBrowser("firefox");
+//        HotelStepDefsSupports.openlandingpage();
+//    }
 
 
     //2nd step
@@ -209,6 +210,7 @@ public class HotelStepDefs extends BaseTestClass {
     @And("^Verify Payment Page$")
     public void verifyPaymentPage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.userClickPopup();
         HotelStepDefsSupports.verifyPaymentPage();
     }
 
@@ -284,6 +286,35 @@ public class HotelStepDefs extends BaseTestClass {
     public void verifyFlexPropertyListingPage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         HotelStepDefsSupports.verifyFlexPropertyCal();
+    }
+
+    @Given("^User tests in given ([^\"]*)$")
+    public void userTestsInGivenBrowsers(String browsers) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.openBrowser(browsers);
+    }
+
+    @And("^User close browser$")
+    public void userCloseBrowser() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.quitallchrome();
+    }
+
+    @And("^Select any Room$")
+    public void selectAnyRoom() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.selectAnyRatesBookNowBtnListingPage();    }
+
+    @Then("^Check whether user able to see the Refundable and Non Refundable rates in the listing page$")
+    public void checkWhetherUserAbleToSeeTheRefundableAndNonRefundableRatesInTheListingPage() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.verifyNonRefundableListing();
+    }
+
+    @Then("^Check whether user able to view the ratings and review details for all properties from the list$")
+    public void checkWhetherUserAbleToViewTheRatingsAndReviewDetailsForAllPropertiesFromTheList() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.verifyRatingandReview();
     }
 }
 

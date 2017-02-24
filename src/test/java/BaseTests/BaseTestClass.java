@@ -7,6 +7,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+
+
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by ADMIN on 1/20/2017.
  */
@@ -31,7 +40,7 @@ public class BaseTestClass {
 //    }
 
 
-    public static void openBrowser(String browsername)
+    public static void openBrowsers(String browsername)
 
     {
 
@@ -39,7 +48,16 @@ public class BaseTestClass {
 
             System.setProperty("webdriver.gecko.driver", "src/main/java/geckodriver.exe");
 
+           // DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+            //capabilities.setCapability("marionette", true);
+            //driver = new FirefoxDriver(capabilities);
+
             driver = new FirefoxDriver();
+
+
+
+
+
 
         } else if(browsername.equalsIgnoreCase("ie")){
 
@@ -52,7 +70,7 @@ public class BaseTestClass {
             System.setProperty("webdriver.chrome.driver", "src/main/java/chromedriver.exe");
 
             driver = new ChromeDriver();
-
+              driver.manage().timeouts().implicitlyWait(5 , TimeUnit.SECONDS);
         }
 
 
