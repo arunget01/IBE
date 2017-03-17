@@ -85,9 +85,4 @@ Feature:  Exact Date Market Search
       |urls|browsers|
       |urlroomavailfalse|chrome|
       |urlroomavailtrue|chrome|
-
-
-
-
-
-
+    
