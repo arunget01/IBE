@@ -197,6 +197,67 @@ public class MarketSearch extends BaseTestClass {
     }
 
 
+    @And("^User clicks on TR user login button$")
+    public void userClicksOnTRUserLoginButton() throws Throwable {
+
+
+        HotelStepDefsSupports.userClicksOnTRUserLoginButton();
+
+    }
+
+    @And("^User enters TR user user name and password$")
+    public void userEntersTRUserUserNameAndPassword() throws Throwable {
+
+        HotelStepDefsSupports.userEntersTRUserUserNameAndPassword();
+
+    }
+
+    @And("^User clicks on siginin button in login pop$")
+    public void userClicksOnSigininButtonInLoginPop() throws Throwable {
+
+        HotelStepDefsSupports.userClicksOnSigininButtonInLoginPop();
+
+
+
+
+    }
+
+    @And("^User navigates to myoffers page$")
+    public void userNavigatesToMyoffersPage() throws Throwable {
+
+        HotelStepDefsSupports.userNavigatesToMyoffersPage();
+
+
+
+    }
+
+    @And("^User selects property from myoffers page$")
+    public void userSelectsPropertyFromMyoffersPage() throws Throwable {
+
+        HotelStepDefsSupports.userSelectsPropertyFromMyoffersPage();
+
+    }
+
+    @And("^User click on check availability button$")
+    public void userClickOnCheckAvailabilityButton() throws Throwable {
+
+        HotelStepDefsSupports.userClickOnCheckAvailabilityButton();
+
+    }
+
+    @And("^User select offer applied date from ratecalendar page$")
+    public void userSelectOfferAppliedDateFromRatecalendarPage() throws Throwable {
+
+        HotelStepDefsSupports.userSelectOfferAppliedDateFromRatecalendarPage();
+
+
+    }
+
+    @And("^User click on trip price overlay$")
+    public void userClickOnTripPriceOverlay() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        HotelStepDefsSupports.userClickOnTripPriceOverlay();
+    }
 }
 
 

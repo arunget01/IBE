@@ -35,12 +35,7 @@ public class HotelStepDefs extends BaseTestClass {
 //   }
 
     // 1st step
-//    @Given("^user go to landing page$")
-//    public void userGoToLandingPage() throws Throwable {
-//        //openChromeBrowser();
-//        //openBrowser("firefox");
-//        HotelStepDefsSupports.openlandingpage();
-//    }
+
 
 
     //2nd step
@@ -288,6 +283,7 @@ public class HotelStepDefs extends BaseTestClass {
         HotelStepDefsSupports.verifyFlexPropertyCal();
     }
 
+
     @Given("^User tests in given ([^\"]*)$")
     public void userTestsInGivenBrowsers(String browsers) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
@@ -315,6 +311,66 @@ public class HotelStepDefs extends BaseTestClass {
     public void checkWhetherUserAbleToViewTheRatingsAndReviewDetailsForAllPropertiesFromTheList() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         HotelStepDefsSupports.verifyRatingandReview();
+    }
+
+
+
+    @And("^User proceed to HRlanding page$")
+    public void userProceedToHRlandingPage() throws Throwable {
+
+        HotelStepDefsSupports.userProceedToHRlandingPage();
+
+    }
+
+
+
+
+
+
+
+
+
+    @And("^User select checkin and checkout date$")
+    public void userSelectCheckinAndCheckoutDate() throws Throwable {
+
+        HotelStepDefsSupports.userSelectCheckinAndCheckoutDate();
+
+
+    }
+
+    @And("^Click on Search from HRlanding page$")
+    public void clickOnSearchFromHRlandingPage() throws Throwable {
+
+        HotelStepDefsSupports.clickOnSearchFromHRlandingPage();
+
+
+    }
+
+    @And("^User click on Find ticket from HR listing page$")
+    public void userClickOnFindTicketFromHRListingPage() throws Throwable {
+
+        HotelStepDefsSupports.userClickOnFindTicketFromHRListingPage();
+
+    }
+
+    @And("^User proceed to HRticketselection page$")
+    public void userProceedToHRticketselectionPage() throws Throwable {
+
+        HotelStepDefsSupports.userProceedToHRticketselectionPage();
+
+
+
+
+    }
+
+    @And("^User click on Findtickets to proceed to itierary page$")
+    public void userClickOnFindticketsToProceedToItieraryPage() throws Throwable {
+
+        HotelStepDefsSupports.userClickOnFindticketsToProceedToItieraryPage();
+
+
+
+
     }
 }
 

@@ -1,8 +1,14 @@
 package Steps.Hotel;
 
 import BaseTests.BaseTestClass;
+
 import BaseTests.BasicProperties.*;
 import org.openqa.selenium.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -12,10 +18,7 @@ import org.testng.Assert;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-
 import static BaseTests.BasicProperties.readProp;
-import static java.lang.System.getProperty;
-
 import static Steps.Hotel.HotelStepDefsFunctions.ExplicitWait;
 
 
@@ -68,31 +71,92 @@ public class HotelStepDefsSupports extends BaseTestClass {
 
     }
 
-//    public static void openlandingpage()
-//
-//    {
-//        //openChromeBrowser();
-//        driver.manage().window().maximize();
-//
-//        //driver.get("https://hettest1.harrahs.org/reserve/#hotel");
-//        driver.get("https://www.totalrewards.com/reserve/?roomavailability=false");
-//        ExplicitWait(driver, "Why book direct");
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//
-//    }
-
     public static void openURL(String urlname)
 
     {
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         driver.get(readProp(urlname));
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         ExplicitlyWaitforlinkText("Privacy");
 
     }
 
 
+
+
+    public static void userClicksOnTRUserLoginButton() {
+
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath(".//*[@id='LoginWidgetForm']/div[1]/a")).click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        waitforgiventime(30000000);
+        switchToFrame("IBE_Login_iFrame");
+
+
+    }
+
+
+
+    public static void userEntersTRUserUserNameAndPassword() {
+
+        driver.findElement(By.xpath("html/body/form/div/div/div[1]/table/tbody/tr[1]/td[2]/input")).sendKeys("16704307364");
+        driver.findElement(By.xpath("html/body/form/div/div/div[1]/table/tbody/tr[2]/td[2]/input")).sendKeys("Password1");
+
+    }
+
+    public static void userClicksOnSigininButtonInLoginPop() {
+
+        //driver.findElement(By.xpath(".//*[@id='submitLink']/img")).click();
+        driver.findElement(By.id("submitLink")).click();
+        waitforgiventime(50000000);
+
+    }
+
+
+    public static void userNavigatesToMyoffersPage() {
+        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+
+        ExplicitlyWaitforElementText(".//a[contains(text(),'My Offers')]");
+        waitfivesec();
+
+        driver.findElement(By.xpath(".//a[contains(text(),'My Offers')]")).click();
+        waitforgiventime(20000000);
+
+    }
+
+    public static void userSelectsPropertyFromMyoffersPage() {
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        new Select(driver.findElement(By.id("casino"))).selectByVisibleText("Flamingo Las Vegas");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath(".//*[@id='my-offers']/div/div[2]/div/dl[2]/dd[2]/a/span")).click();
+
+    }
+
+    public static void userClickOnCheckAvailabilityButton()
+
+    {
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.findElement(By.xpath(".//*[@id='divbook-offer']/div/dl/dd[3]/a/span")).click();
+    }
+
+
+    public static void userSelectOfferAppliedDateFromRatecalendarPage() {
+
+
+        ExplicitlyWaitforElementText("/*//*[contains(text(), 'Offer Available')][1]");
+        waitfivesec();
+        List<WebElement> buttons = driver.findElements(By.xpath("/*//*[contains(text(), 'Offer Available')][1]"));
+        WebElement chk = buttons.get(2);
+        chk.click();
+        waittwosec();
+        WebElement chkd = buttons.get(3);
+        chkd.click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+    }
 
 
     public static void userEnterCheckinCheckoutDates() {
@@ -154,6 +218,67 @@ public class HotelStepDefsSupports extends BaseTestClass {
 
 
 
+
+    public static void userProceedToHRlandingPage(){
+
+
+        driver.findElement(By.xpath(".//*[contains(text(), 'tickets')]")).click();
+        waittensec();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        ExplicitWait(driver, "Book your ticket");
+
+    }
+
+
+    public static void userSelectCheckinAndCheckoutDate(){
+
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.findElement(By.xpath(".//*[@id='arrdate']")).click();
+        driver.findElement(By.linkText("Next")).click(); //click next month
+        driver.findElement(By.linkText("25")).click(); //click day
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.findElement(By.xpath(".//*[@id='Text3']")).click(); //Check-out- Date Picker
+        driver.findElement(By.linkText("Next")).click(); //click next month
+        driver.findElement(By.linkText("28")).click(); //click day
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+    }
+
+
+    public static void clickOnSearchFromHRlandingPage(){
+
+        waitforgiventime(40000000);
+        driver.findElement(By.xpath(".//*[@id='btnSearch']")).click();
+
+    }
+
+public static void userClickOnFindTicketFromHRListingPage(){
+
+//    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+//    driver.findElement(By.xpath(".//*[contains(text(), 'find tickets')]")).click();
+    driver.findElement(By.xpath(".//*[@id='showList']/div/section/div/section/section/div[2]/div/a")).click();
+
+}
+
+public static void userProceedToHRticketselectionPage(){
+
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+        driver.findElement(By.xpath(".//*[@id='ticketList']/div[2]/div[3]/ul/li[2]/label/div")).click();
+        //driver.findElement(By.xpath(".//*[@id='accessibilityfilter']/div/div[1]/dl/dd[4]/a")).click();
+
+
+}
+
+public static void userClickOnFindticketsToProceedToItieraryPage(){
+
+    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    driver.findElement(By.xpath(".//*[text()[contains(.,'FIND TICKETS')]]")).click();
+
+}
+
+
     public static void verifyRatingandReview() {
 
         List<WebElement> listse = driver.findElements(By.xpath(".//*[text()[contains(.,'Reviews')]]"));
@@ -174,10 +299,6 @@ public class HotelStepDefsSupports extends BaseTestClass {
         WebElement button = buttons.get(0);
         // waitForElement(button);
         button.click();
-
-
-//        driver.findElement(By.xpath(".//*[@id='accessibilityfilter']/div/div[2]/div[2]/div/dd[1]/span[1]/div")).click();
-//        driver.findElement(By.xpath(".//*[@id='accessibilityfilter']/div/div[2]/div[3]/div/span[3]/div")).click();
 
 
     }
@@ -215,50 +336,32 @@ public class HotelStepDefsSupports extends BaseTestClass {
         WebElement chkd = buttons.get(1);
         chkd.click();
 
-//        java.util.Iterator<WebElement> i = buttons.iterator();
-//        while (i.hasNext()) {
-//            WebElement row = i.next();
-//            WebElement roww = i.next();
-//
-//            String vl = row.getText();
-//            String vll = roww.getText();
-//
-//            if (vl.contains("Add to cart")) {
-//                if (vll.contains("Add to cart"))
-//
-//                {//click
-//
-//                    break;
-//            }
-//
-//            }
 
     }
 
     public static void userClickOnGetTripPriceButton() {
-
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.findElement(By.xpath(".//*[@id='btngreen_getprice5']/span")).click();
 
     }
 
-    public static void userClickOnBookItFromPricingDetailsOverlay() {
+    public static void userClickOnTripPriceOverlay() {
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.findElement(By.xpath(".//*[@id='btngreen_getprice5']/span")).click();
 
-        //driver.findElement(By.xpath("//*[contains(text(), 'book it ')]")).click();
-        ExplicitlyWaitforElementText("//*[contains(text(), 'book it ')]");
-        waitfivesec();
-        driver.findElement(By.xpath("//*[contains(text(), 'book it ')]")).click();
+
+    }
+
+    public static void userClickOnBookItFromPricingDetailsOverlay() {
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.findElement(By.xpath(".//*[@id='pricing']/div/div/form/fieldset/div[3]/a")).click();
+
+
+
     }
 
 
     public static void userSelectRoom() {
-
-//        List<WebElement> buttons = driver.findElements(By.xpath(".//*[@id='A1']"));
-//        WebElement button = buttons.get(1);
-//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-//        System.out.println(button.getText() + " -------------------------------------->>>>>>");
-//        waitForElement(button);
-//        button.click();
-//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 
         ExplicitlyWaitforElementText(".//a[contains(text(),'book now')]");
@@ -267,6 +370,8 @@ public class HotelStepDefsSupports extends BaseTestClass {
         waitForElement(button);
         button.click();
         ExplicitlyWaitforlinkText("Remove");
+
+
     }
 
     public static void userVerifyTripSummaryPage() {
@@ -316,6 +421,9 @@ public class HotelStepDefsSupports extends BaseTestClass {
     public static void userClickOnContinueToCheckout() {
 
 
+//        driver.findElement(By.xpath("//*[contains(text(), 'Continue To Checkout')]")).click();
+//        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
         WebElement element = driver.findElement(By.xpath("//*[contains(text(), 'Continue To Checkout')]"));
 
         if ("input".equals(element.getTagName())) {
@@ -326,12 +434,12 @@ public class HotelStepDefsSupports extends BaseTestClass {
         try {
             element.click();
         } catch (Exception e) {
-            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
             WebElement element1 = driver.findElement(By.xpath("//*[contains(text(), 'Continue To Checkout')]"));
             new Actions(driver).moveToElement(element1).build().perform();
             element1.click();
 
-            ExplicitlyWaitforElementText( "//*[contains(text(), 'Continue To Checkout')]");
+            ExplicitlyWaitforElementText("//*[contains(text(), 'Continue To Checkout')]");
 
             ExplicitlyWaitforlinkText("Continue");
         }
@@ -372,7 +480,7 @@ public class HotelStepDefsSupports extends BaseTestClass {
     {
         //openChromeBrowser();
         driver.manage().window().maximize();
-        driver.get("https://www.totalrewards.com/reserve/?roomavailability=true");
+        driver.get("https://www.totalrewards.com/reserve/?roomavailability=false");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
@@ -400,7 +508,7 @@ public class HotelStepDefsSupports extends BaseTestClass {
     {
         waittwosec();
         WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("location")));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("location")));
 
        Select dropdown = new Select(driver.findElement(By.id("location")));
        dropdown.selectByVisibleText(marketvalue);
@@ -417,23 +525,25 @@ public class HotelStepDefsSupports extends BaseTestClass {
     }
 
 
-
     public static void checkRoomAdded()
 
     {
-        String  listfs = driver.findElement(By.xpath(".//*[contains(text(),'Room Upgrade')]")).getText();
-        Assert.assertEquals(listfs,"Room Upgrade Discount","Room Upgrade not found!");
+        String listfs = driver.findElement(By.xpath(".//*[contains(text(),'Room Upgrade')]")).getText();
+        Assert.assertEquals(listfs, "Room Upgrade Discount", "Room Upgrade not found!");
 
     }
 
-    public static  void continueUpgrade( ) throws Exception
+    public static void continueUpgrade() throws Exception
 
     {
 
         ExplicitlyWaitforlinkText("Remove");
         try {
             String listf = driver.findElement(By.xpath(".//a[contains(text(),'Upgrade')]")).getText();
-            Assert.assertEquals(listf,"UPGRADE","Total not found!");
+
+            Assert.assertEquals(listf, "UPGRADE", "Total not found!");
+            System.out.println("Asserted Text");
+
 
             List<WebElement> buttons = driver.findElements(By.xpath(".//a[contains(text(),'Upgrade')]"));
 
@@ -443,26 +553,19 @@ public class HotelStepDefsSupports extends BaseTestClass {
             ExplicitlyWaitforlinkText("Undo?");
 
 
-
-
-        }
-
-        catch(Exception e)
+        } catch (Exception e)
 
         {
 
-            Assert.assertEquals(false,"Upgrade Error");
+            Assert.assertEquals(false, "Upgrade Error");
             throw (e);
         }
-
-
 
 
     }
 
 
-
-    public static  void continueCheckOut( )
+    public static void continueCheckOut()
 
 
     {
@@ -482,29 +585,6 @@ public class HotelStepDefsSupports extends BaseTestClass {
 
         ExplicitlyWaitforlinkText("Remove");
         String listf = driver.findElement(By.xpath("//*[contains(text(), 'Total:')]")).getText();
-        Assert.assertEquals(listf,"Total:","Total not found!");
-        String listsg = driver.findElement(By.xpath("//*[contains(text(), 'Taxes')]")).getText();
-        Assert.assertEquals(listsg,"Taxes:","Taxes not found!");
-
-    }
-
-
-
-    public static void verifyItinPageMroom() {
-
-ExplicitlyWaitforlinkText("Remove");
-        String listf = driver.findElement(By.xpath("//*[contains(text(), 'Total:')]")).getText();
-        Assert.assertEquals(listf,"Total:","Total not found!");
-        String listsg = driver.findElement(By.xpath("//*[contains(text(), 'Taxes')]")).getText();
-        Assert.assertEquals(listsg,"Taxes:","Taxes not found!");
-
-    }
-
-    public static void verifyItinPageMultiRoom() {
-
-        ExplicitlyWaitforElementText( "//*[contains(text(), 'Hotel added')]");
-
-        String listf = driver.findElement(By.xpath("//*[contains(text(), 'Total:')]")).getText();
         Assert.assertEquals(listf, "Total:", "Total not found!");
         String listsg = driver.findElement(By.xpath("//*[contains(text(), 'Taxes')]")).getText();
         Assert.assertEquals(listsg, "Taxes:", "Taxes not found!");
@@ -512,8 +592,26 @@ ExplicitlyWaitforlinkText("Remove");
     }
 
 
+    public static void verifyItinPageMroom() {
 
+        ExplicitlyWaitforlinkText("Remove");
+        String listf = driver.findElement(By.xpath("//*[contains(text(), 'Total:')]")).getText();
+        Assert.assertEquals(listf, "Total:", "Total not found!");
+        String listsg = driver.findElement(By.xpath("//*[contains(text(), 'Taxes')]")).getText();
+        Assert.assertEquals(listsg, "Taxes:", "Taxes not found!");
 
+    }
+
+    public static void verifyItinPageMultiRoom() {
+
+        ExplicitlyWaitforElementText("//*[contains(text(), 'Hotel added')]");
+
+        String listf = driver.findElement(By.xpath("//*[contains(text(), 'Total:')]")).getText();
+        Assert.assertEquals(listf, "Total:", "Total not found!");
+        String listsg = driver.findElement(By.xpath("//*[contains(text(), 'Taxes')]")).getText();
+        Assert.assertEquals(listsg, "Taxes:", "Taxes not found!");
+
+    }
     public static void verifyCartHasnRooms(int nroomm) {
 
 
@@ -529,13 +627,13 @@ ExplicitlyWaitforlinkText("Remove");
         while (i.hasNext()) {
             WebElement row = i.next();
             String vl = row.getText();
-           if( vl.contains("Room "+jk+":"))
+            if( vl.contains("Room "+jk+":"))
 
-           {
-               c = true;
+            {
+                c = true;
 
-               break;
-           }
+                break;
+            }
 
 //            if (!i.hasNext()) {
 //            Assert.assertTrue(false, "Room 2 not showing");
@@ -543,12 +641,15 @@ ExplicitlyWaitforlinkText("Remove");
 //
 //            }
 
-        oo = oo+1;}
+            oo = oo+1;}
 
         if ( c==false){            Assert.assertTrue(false, "Room "+nroomm+" not showing");
         }
 
     }
+
+
+
 
 
     public static void verifyPaymentPage() {
@@ -578,19 +679,8 @@ ExplicitlyWaitforlinkText("Remove");
 
     }
 
-
-    public boolean isElementPresent(By locatorKey) {
+    public static boolean isElementVisible(String xpathlocator) {
         try {
-            driver.findElement(locatorKey);
-            return true;
-        } catch (org.openqa.selenium.NoSuchElementException e) {
-            return false;
-        }
-    }
-
-    public static boolean isElementVisible(String xpathlocator){
-        try
-        {
             driver.findElement(By.xpath(xpathlocator));
             return false;
         } catch (NoSuchElementException e) {
@@ -609,13 +699,16 @@ ExplicitlyWaitforlinkText("Remove");
         }
 
 
+
     }
+
 
     public static void verifyFlexPropertyCal() {
 
 
         ExplicitlyWaitforElementText("//*[contains(text(), 'Reviews')]");
         String urlnow = driver.getCurrentUrl();
+
         if (urlnow.contains("roomavailability=true")) {
             String listfs = driver.findElement(By.xpath("//*[contains(text(), 'GRID')]")).getText();
             Assert.assertEquals(listfs, "GRID", "GRID not displayed");
@@ -632,11 +725,12 @@ ExplicitlyWaitforlinkText("Remove");
             Assert.assertTrue(valuey, "CALENDAR is displayed in Non Room Availability Branch");
         }
 
+
     }
 public static void openBrowser(String brname){
     openBrowsers(brname);
-    }
 
+    }
 
     public static void screenshot(String marketvalue)
 
@@ -665,7 +759,6 @@ public static void openBrowser(String brname){
         driver.findElement(By.xpath(".//*[@id='btngreen_roomList']")).click();
 
     }
-
 
     public static void selectAnyRate()
 
@@ -720,7 +813,6 @@ public static void openBrowser(String brname){
 
     }
 
-
     public static void selectRcount(int counts)
 
     {
@@ -743,7 +835,6 @@ public static void openBrowser(String brname){
         dropdown.selectByIndex(ccounts);
 
     }
-
 
     public static void verifyroomguests(int rccounts, String gcountss)
 
@@ -784,7 +875,6 @@ public static void openBrowser(String brname){
         }
     }
 
-
     public static void selectMonth(int monthvalue)
 
     {
@@ -804,7 +894,6 @@ public static void openBrowser(String brname){
 
 
     }
-
 
     public static void selectRoomOptions()
 
@@ -846,12 +935,14 @@ public static void openBrowser(String brname){
         ExplicitlyWaitforElementText("//*[contains(text(), 'View Total')]");
         waitforgiventime(10);
 
+
         ExplicitlyWaitforlinkText( "View Total");
         ExplicitlyWaitforlinkText( "Privacy");
         try {
             driver.findElement(By.xpath(".//label[contains(text(), '1 King')]")).click();
 
         }catch (Exception e){
+
 
 
 
@@ -873,7 +964,6 @@ public static void openBrowser(String brname){
 
     }
 
-
     public static void removeRoom()
 
     {
@@ -886,7 +976,6 @@ public static void openBrowser(String brname){
 
 
     }
-
 
     public static void selectRoom()
 
@@ -927,7 +1016,6 @@ public static void openBrowser(String brname){
 
 
     }
-
 
     public static void selectMarket()
 
@@ -975,8 +1063,32 @@ public static void openBrowser(String brname){
 
 
 
+            WebDriverWait wait = new WebDriverWait(driver, 30);
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            System.out.println(element.isEnabled() + "  +++++++++++++++++++++++++++++++++++++ " + element.isDisplayed());
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
         }
 
+    }
+
+    private static void switchToFrame(String frameId) {
+
+        WebElement frame = driver.findElement(By.id(frameId));
+        try {
+            driver.switchTo().frame(frame);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public boolean isElementPresent(By locatorKey) {
+        try {
+            driver.findElement(locatorKey);
+            return true;
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
 
 
