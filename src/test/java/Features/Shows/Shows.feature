@@ -1,14 +1,18 @@
-#Feature:
-#  Shows Features
+#Feature:Shows Search
 #
-#  Scenario Outline: Exact date search
-#    Given user go to landing page
-#    And User selects Exact date
-#    And User selects below "<markets>" and "<hotels>"
-#    And User selectes dates which is one month head
-#    When User click on Search
-#    Then Search results should be displayed
+#  Scenario Outline: Shows Market Search
+#    Given User tests in given <browsers>
+#    Given Open "urlshow" enableshow=true
+#    And User proceed to showslanding page
+#    And Select Market - "Las Vegas"
+#    And Select Property "Flamingo Las Vegas"
+#    And User select checkin and checkout date
+#    And Click on Search
 #
-#    Examples:
-#      |markets|hotels|
-#      | Las Vegas     |  Caesars    |
+#
+#
+#Examples:
+#      | urls              | browsers |
+#      | urlroomavailfalse | chrome   |
+#     #| urlroomavailfalse | ie       |
+#     #| urlroomavailfalse | firefox  |

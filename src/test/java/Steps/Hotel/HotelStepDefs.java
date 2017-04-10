@@ -271,6 +271,16 @@ public class HotelStepDefs extends BaseTestClass {
         HotelStepDefsSupports.openURL(hrurl);
     }
 
+
+    @Given("^Open \"([^\"]*)\" enableshow=true$")
+    public void openEnableshowTrue(String showsurl) throws Throwable {
+
+        HotelStepDefsSupports.openURL(showsurl);
+
+
+    }
+    
+
     @Given("^User opens given ([^\"]*)$")
     public void userOpensGivenUrls(String hrurl) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
@@ -372,6 +382,17 @@ public class HotelStepDefs extends BaseTestClass {
 
 
     }
+
+    @And("^User proceed to showslanding page$")
+    public void userProceedToShowslandingPage() throws Throwable {
+
+        HotelStepDefsSupports.userProceedToShowslandingPage();
+
+
+
+    }
+
+
 }
 
 

@@ -88,21 +88,7 @@ Feature: Hotel Features
 
 
 
-#
-#Scenario: HR Voucher - Las Vegas
-# Given Open "urlhr" enableshow=hr
-# And  Select Tickets
-# Then Verify High roller in Listing page
-# And Select and continue to 'Find Tickets'
-# And Select TicketType, multiple tickets for passengers, date and continue
-# And Add High roller to trip and continue to checkout
-# And Continue to payment and fill guest details
-# And Verify Payment page of HR
-
-
-
-#
-#Scenario Outline: Non refundable = TRUE
+##Scenario Outline: Non refundable = TRUE
 #
 #  Given User tests in given <browsers>
 #  Given User opens given <urls>
