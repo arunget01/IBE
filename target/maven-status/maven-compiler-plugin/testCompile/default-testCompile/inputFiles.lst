@@ -1,5 +1,8 @@
-E:\Automation\ibe-automation\IBE\src\test\java\BaseTests\BaseTestClass.java
-E:\Automation\ibe-automation\IBE\src\test\java\Steps\HotelStepDefs.java
-E:\Automation\ibe-automation\IBE\src\test\java\Steps\HotelStepDefsSupport.java
-E:\Automation\ibe-automation\IBE\src\test\java\Steps\HotelStepDefsSupports.java
-E:\Automation\ibe-automation\IBE\src\test\java\RunnerTest.java
+C:\IBS_WORK_NEW\IBE\src\test\java\BaseTests\BaseTestClass.java
+C:\IBS_WORK_NEW\IBE\src\test\java\Steps\Hotel\HotelStepDefs.java
+C:\IBS_WORK_NEW\IBE\src\test\java\BaseTests\BasicProperties.java
+C:\IBS_WORK_NEW\IBE\src\test\java\Steps\Hotel\HotelStepDefsFunctions.java
+C:\IBS_WORK_NEW\IBE\src\test\java\RunnerTest.java
+C:\IBS_WORK_NEW\IBE\src\test\java\Steps\Hotel\HotelStepDefsSupports.java
+C:\IBS_WORK_NEW\IBE\src\test\java\BaseTests\Hooks.java
+C:\IBS_WORK_NEW\IBE\src\test\java\Steps\Hotel\MarketSearch.java

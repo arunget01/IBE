@@ -19,24 +19,24 @@ public class HotelStepDefsFunctions extends BaseTestClass{
 
     }
 
-//    public static void loadLandingPage()
-//
-//    {
-//        //initalizedriver();
-//        driver.get("https://www.totalrewards.com/reserve/?roomavailability=false");
-//        ExplicitWait(driver, "Why book direct");
-//
-//    }
-//
-//    public static void loadLandingPages()
-//
-//    {
-//
-//        driver.get("https://www.totalrewards.com/reserve/");
-//        ExplicitWait(driver, "Why book direct");
-//       // Assert
-//
-//    }
+    public static void loadLandingPage()
+
+    {
+        //initalizedriver();
+        driver.get("https://www.totalrewards.com/reserve/?roomavailability=false");
+        ExplicitWait(driver, "Why book direct");
+
+    }
+
+    public static void loadLandingPages()
+
+    {
+
+        driver.get("https://www.totalrewards.com/reserve/");
+        ExplicitWait(driver, "Why book direct");
+       // Assert
+
+    }
 
     public static void closeBrowser()
 

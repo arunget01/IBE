@@ -1,5 +1,8 @@
-Steps\HotelStepDefsSupports.class
+Steps\Hotel\HotelStepDefs.class
+Steps\Hotel\HotelStepDefsFunctions.class
 BaseTests\BaseTestClass.class
-Steps\HotelStepDefs.class
 RunnerTest.class
-Steps\HotelStepDefsSupport.class
+Steps\Hotel\MarketSearch.class
+BaseTests\BasicProperties.class
+BaseTests\Hooks.class
+Steps\Hotel\HotelStepDefsSupports.class
